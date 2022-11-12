@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { About, Portfolio, Resume, Contact } from "./components/Main";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("React-Portfolio");
+  const handlePageChange = (page) => setCurrentPage(page);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BrowserRouter>
+        <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/BragBoard" element={<BragBoard />} /> */}
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
+        </Routes>
+      </BrowserRouter>
+
+      <Footer year={new Date().getFullYear()} />
     </div>
   );
 }
