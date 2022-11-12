@@ -15,10 +15,10 @@ function App() {
       <BrowserRouter>
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/BragBoard" element={<BragBoard />} /> */}
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} />
+          <Route path="/home" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
 
