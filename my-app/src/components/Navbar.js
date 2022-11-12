@@ -16,13 +16,13 @@ function Navbar({ currentPage, handlePageChange }) {
           Portfolio
         </Link>
         <Link
-          onClick={() => handlePageChange("Home")}
+          onClick={() => handlePageChange("React-Portfolio")}
           className={
-            currentPage === "Home"
+            currentPage === "React-Portfolio"
               ? "nav-link active fs-3 me-2"
               : "nav-link fs-3 me-2"
           }
-          to="/About"
+          to="/React-Portfolio"
         >
           About Me
         </Link>

@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("/");
+  const [currentPage, setCurrentPage] = useState("React-Portfolio");
   const handlePageChange = (page) => setCurrentPage(page);
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
         <Routes>
-          <Route path="/" element={<Portfolio />} />
+          <Route path="/React-Portfolio" element={<Portfolio />} />
           <Route path="/About" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
