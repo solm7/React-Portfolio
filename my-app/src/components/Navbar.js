@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 function Navbar({ currentPage, handlePageChange }) {
   return (
-    <div className="d-flex flex-wrap justify-content-center">
+    <div className="d-flex flex-wrap justify-content-center mb-4">
       <nav className="navbar navbar-expand-lg">
         <Link
           onClick={() => handlePageChange("portfolio")}
           className={
             currentPage === "portfolio"
-              ? "nav-link active fs-3"
-              : "nav-link fs-3"
+              ? "nav-link active fs-3 me-2"
+              : "nav-link fs-3  me-2"
           }
           to="/"
         >
@@ -18,7 +18,9 @@ function Navbar({ currentPage, handlePageChange }) {
         <Link
           onClick={() => handlePageChange("Home")}
           className={
-            currentPage === "Home" ? "nav-link active fs-3" : "nav-link fs-3"
+            currentPage === "Home"
+              ? "nav-link active fs-3 me-2"
+              : "nav-link fs-3 me-2"
           }
           to="/About"
         >
@@ -27,7 +29,9 @@ function Navbar({ currentPage, handlePageChange }) {
         <Link
           onClick={() => handlePageChange("contact")}
           className={
-            currentPage === "contact" ? "nav-link active fs-3" : "nav-link fs-3"
+            currentPage === "contact"
+              ? "nav-link active fs-3 me-2"
+              : "nav-link fs-3 me-2"
           }
           to="/contact"
         >
@@ -36,7 +40,9 @@ function Navbar({ currentPage, handlePageChange }) {
         <Link
           onClick={() => handlePageChange("resume")}
           className={
-            currentPage === "resume" ? "nav-link active fs-3" : "nav-link fs-3"
+            currentPage === "resume"
+              ? "nav-link active fs-3 me-2"
+              : "nav-link fs-3 me-2"
           }
           to="/resume"
         >
