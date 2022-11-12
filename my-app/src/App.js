@@ -1,13 +1,16 @@
 import "./App.css";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { About, Portfolio, Resume, Contact } from "./components/Main";
+import Home from "./components/Home";
+import Portfolio from "./components/Portfolio";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
 import Header from "./components/Header";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("React-Portfolio");
+  const [currentPage, setCurrentPage] = useState("/");
   const handlePageChange = (page) => setCurrentPage(page);
   return (
     <div className="App">
@@ -15,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
         <Routes>
-          <Route path="/home" element={<About />} />
+          <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
