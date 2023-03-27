@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <HashRouter>
+      <BrowserRouter>
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
         <Routes>
           <Route path="/React-Portfolio" element={<Portfolio />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
 
       <Footer year={new Date().getFullYear()} />
     </div>
