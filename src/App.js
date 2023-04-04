@@ -14,11 +14,6 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
   return (
     <div className="App">
-      ReactDOM.render((
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <App />
-      </BrowserRouter>
-      ))
       <Header />
       <BrowserRouter>
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
