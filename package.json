@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "engines": {
-    "node": "19.x"
+    "node": "18.x"
   },
   "stack": "heroku-20",
   "dependencies": {
