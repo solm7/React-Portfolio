@@ -11,7 +11,7 @@ function Navbar({ currentPage, handlePageChange }) {
               ? "nav-link active fs-3 me-2"
               : "nav-link fs-3  me-2"
           }
-          to="/"
+          to="/React-Portfolio"
         >
           Portfolio
         </Link>
@@ -22,7 +22,7 @@ function Navbar({ currentPage, handlePageChange }) {
               ? "nav-link active fs-3 me-2"
               : "nav-link fs-3 me-2"
           }
-          to="/React-Portfolio"
+          to="/"
         >
           About Me
         </Link>
