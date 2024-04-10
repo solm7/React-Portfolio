@@ -1,4 +1,4 @@
-import myResume from "/Users/solomondorsey/Desktop/BootCamp/React-Portfolio/React-Portfolio/src/files/Solomon_Dorsey_Resume.pdf";
+import myResume from "/Users/solomondorsey/Desktop/BootCamp/React-Portfolio/React-Portfolio/src/files/SolomonDorseyResume.docx";
 function Resume() {
   return (
     <div>
