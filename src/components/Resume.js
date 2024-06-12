@@ -1,4 +1,4 @@
-import myResume from '../files/Solomon_Dorsey_Resume_Original.docx';
+import myResume from '../files/Solomon_Dorsey_Resume_Original.pdf';
 function Resume() {
   return (
     <div>
