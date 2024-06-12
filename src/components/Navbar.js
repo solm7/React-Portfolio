@@ -1,20 +1,10 @@
+// Navbar.js
 import { Link } from "react-router-dom";
 
 function Navbar({ currentPage, handlePageChange }) {
   return (
     <div className="d-flex flex-wrap justify-content-center mb-4">
       <nav className="navbar navbar-expand-lg">
-        <Link
-          onClick={() => handlePageChange("portfolio")}
-          className={
-            currentPage === "portfolio"
-              ? "nav-link active fs-3 me-2"
-              : "nav-link fs-3  me-2"
-          }
-          to="/React-Portfolio"
-        >
-          Portfolio
-        </Link>
         <Link
           onClick={() => handlePageChange("React-Portfolio")}
           className={
@@ -25,6 +15,17 @@ function Navbar({ currentPage, handlePageChange }) {
           to="/"
         >
           About Me
+        </Link>
+        <Link
+          onClick={() => handlePageChange("portfolio")}
+          className={
+            currentPage === "portfolio"
+              ? "nav-link active fs-3 me-2"
+              : "nav-link fs-3 me-2"
+          }
+          to="/portfolio"
+        >
+          Portfolio
         </Link>
         <Link
           onClick={() => handlePageChange("contact")}
@@ -52,4 +53,5 @@ function Navbar({ currentPage, handlePageChange }) {
     </div>
   );
 }
+
 export default Navbar;

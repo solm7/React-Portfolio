@@ -18,8 +18,8 @@ function App() {
       <BrowserRouter>
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
         <Routes>
-          <Route path="/React-Portfolio" element={<Portfolio />} />
-          <Route path="/About" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
